@@ -1,0 +1,65 @@
+@font-face { font-family: 'Lusail'; src: url('/fonts/Lusail-Light.ttf') format('truetype'); font-weight: 300; font-display: swap; }
+@font-face { font-family: 'Lusail'; src: url('/fonts/Lusail-Regular.ttf') format('truetype'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Lusail'; src: url('/fonts/Lusail-Medium.ttf') format('truetype'); font-weight: 500; font-display: swap; }
+@font-face { font-family: 'Lusail'; src: url('/fonts/Lusail-Bold.ttf') format('truetype'); font-weight: 700; font-display: swap; }
+
+:root {
+  --font-sans: 'Lusail', system-ui, sans-serif;   /* bilingual Arabic + Latin */
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  /* Brand (from the SGA logo: green / gold / red) */
+  --green-950: #0f2018;   /* deepest overlay */
+  --green-900: #13281e;   /* dark bands, primary text */
+  --green-850: #22392c;   /* image fallback on dark */
+  --green-700: #1f6b46;   /* brand green: links, eyebrows, contact card */
+  --green-650: #17573a;   /* link hover, gradient end */
+  --green-600: #2a8a5b;   /* gradient start, focus */
+  --green-100: #dcf2e6;
+  --green-50:  #eef9f3;
+  --gold-500:  #fcc326;   /* accent */
+  --gold-600:  #e3a90f;   /* accent hover */
+  --gold-700:  #b07d06;   /* numbers on light */
+  --red-600:   #cc3333;   /* logo red — errors / rare accents only */
+  --red-700:   #a32525;   /* error text */
+
+  /* Warm neutrals */
+  --cream-50:  #f7f3ea;   /* page bg */
+  --cream-100: #f1ede3;   /* subtle hover */
+  --sand-200:  #ece4d3;   /* product band bg */
+  --sand-300:  #e4dccb;   /* card borders / image fallback */
+  --sand-400:  #ddd4c2;   /* hairlines on cream */
+  --sand-500:  #d3c8b2;   /* hairlines on sand */
+  --ink-700:   #3d4a42;   /* body on light */
+  --ink-600:   #4d5a52;
+  --ink-500:   #5d6a61;   /* muted */
+  --ink-400:   #6b7369;   /* labels */
+
+  /* Text on dark */
+  --on-dark-1: #ffffff;
+  --on-dark-2: #dbe5de;
+  --on-dark-3: #cfdcd3;
+  --on-dark-4: #b9cbbf;
+  --on-dark-5: #9fb3a6;
+  --on-dark-6: #7f9787;
+
+  --border-input: #c0cbd9;
+
+  /* Radii */
+  --radius-sm: 8px; --radius-md: 12px; --radius-pill: 999px;
+  /* Spacing (4px grid) */
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px; --space-5: 24px; --space-6: 32px; --space-7: 40px; --space-8: 48px; --space-9: 64px; --space-10: 80px;
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(13,22,38,.08), 0 1px 2px rgba(13,22,38,.04);
+  --shadow-md: 0 4px 12px rgba(13,22,38,.08), 0 1px 3px rgba(13,22,38,.05);
+  --shadow-lg: 0 12px 28px rgba(13,22,38,.12), 0 4px 8px rgba(13,22,38,.06);
+  --shadow-xl: 0 24px 56px rgba(6,50,95,.18);
+  --focus-ring: 0 0 0 3px rgba(42,138,91,.35);
+  /* Motion */
+  --ease-standard: cubic-bezier(.2,0,.2,1);
+  --duration-fast: 120ms; --duration-base: 200ms;
+
+  --container: 1320px;
+  --gutter: clamp(20px, 4vw, 32px);
+  --section-y: clamp(72px, 9vw, 128px);
+  --section-y-sm: clamp(64px, 8vw, 112px);
+}

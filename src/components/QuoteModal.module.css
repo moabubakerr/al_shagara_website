@@ -1,0 +1,133 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  padding: 24px;
+  overflow-y: auto;
+  background: rgba(15, 32, 24, .55);
+  animation: fade var(--duration-base) var(--ease-standard);
+}
+
+/* margin: auto centres the dialog but lets it scroll instead of clipping on short viewports. */
+.dialog {
+  width: 100%;
+  max-width: 560px;
+  margin: auto;
+  background: #fff;
+  color: var(--green-900);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-xl);
+  animation: rise var(--duration-base) var(--ease-standard);
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 28px 28px 0;
+}
+
+.title {
+  font-size: 26px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.subtitle {
+  margin-top: 6px;
+  font-size: 15px;
+  color: var(--ink-500);
+}
+
+.close {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 50%;
+  font-size: 24px;
+  line-height: 1;
+  color: var(--green-900);
+  cursor: pointer;
+  transition: background-color var(--duration-fast) var(--ease-standard);
+}
+
+.close:hover {
+  background: var(--cream-100);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 28px 28px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+  gap: 16px;
+}
+
+.error {
+  padding: 12px 14px;
+  background: #fdf0f0;
+  border: 1px solid #f3cfcf;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  color: var(--red-700);
+}
+
+.successWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 24px 28px 28px;
+}
+
+.success {
+  width: 100%;
+  padding: 14px 18px;
+  background: var(--green-50);
+  border: 1px solid var(--green-100);
+  border-radius: var(--radius-sm);
+  color: var(--green-700);
+}
+
+@media (max-width: 479px) {
+  .overlay {
+    padding: 12px;
+  }
+
+  .header {
+    padding: 22px 20px 0;
+  }
+
+  .form,
+  .successWrap {
+    padding: 20px;
+  }
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(8px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .overlay,
+  .dialog {
+    animation: none;
+  }
+}

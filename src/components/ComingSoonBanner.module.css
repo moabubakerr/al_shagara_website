@@ -1,0 +1,44 @@
+.banner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+  gap: 24px 48px;
+  align-items: center;
+  padding: clamp(28px, 4vw, 44px);
+  background: var(--green-900);
+  color: #fff;
+  border-radius: var(--radius-md);
+}
+
+.pill {
+  display: inline-block;
+  padding: 5px 12px;
+  background: var(--gold-500);
+  color: var(--green-900);
+  border-radius: var(--radius-pill);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.title {
+  margin-top: 16px;
+  font-size: clamp(26px, 2.8vw, 36px);
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.ar {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--gold-500);
+  text-align: left;
+}
+
+.body {
+  font-size: 16.5px;
+  line-height: 1.65;
+  color: var(--on-dark-3);
+}
