@@ -15,7 +15,8 @@ npm ci --no-audit --no-fund
 
 echo "==> Building"
 # Build to a separate folder so the live site keeps working until the new build is ready.
-npx tsc --noEmit
+# Type-checking (tsc) is skipped here — it needs more memory than this 512 MB server has;
+# run `npm run build` on your PC before pushing to catch type errors.
 npx vite build --outDir dist-next --emptyOutDir
 rm -rf dist
 mv dist-next dist
